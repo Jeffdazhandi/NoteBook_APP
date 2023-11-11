@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="记事本"
+        android:textSize="30sp"
+        android:textColor="@color/goldenrod"
+        android:background="@null"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/search_text"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/title"
+        android:layout_centerInParent="true"
+        android:background="@null"
+        android:drawableLeft="@drawable/search"
+        android:hint="搜索笔记"
+        android:imeOptions="actionSearch"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/check"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignBottom="@+id/search_text"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toEndOf="@+id/search_text"
+        android:layout_toRightOf="@id/search_text"
+        android:background="@drawable/check" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_text"
+        android:padding="20dp" />
+
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="20dp"/>
+
+</RelativeLayout>
